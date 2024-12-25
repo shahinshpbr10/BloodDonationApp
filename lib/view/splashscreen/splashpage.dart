@@ -1,5 +1,6 @@
 import 'package:blood_donation_app/common/appsizes.dart';
 import 'package:blood_donation_app/common/imageurl.dart';
+import 'package:blood_donation_app/view/splashscreen/nextpage.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -11,68 +12,86 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   @override
+  void initState() {
+    super.initState();
+
+    // Set a 0.5 second delay to navigate to another page
+    Future.delayed(const Duration(milliseconds: 2000), () {
+      // Navigate to the next screen (replace SplashPage with your next page)
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomePage()), // Replace with your next page
+      );
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width; // Screen width
-    final height = MediaQuery.of(context).size.height; // Screen height
 
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Title Section
-            const Text(
-              "Blood Donotion",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-                color: Colors.blueGrey,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: 60), // Uniform horizontal padding
+          child: Column(
+            mainAxisAlignment:
+                MainAxisAlignment.center, // Center content vertically
+            crossAxisAlignment:
+                CrossAxisAlignment.center, // Center content horizontally
+            children: [
+              // Title and Subtitle Section
+              Column(
+                children: [
+                  const Text(
+                    "Blood Donation", // Title
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  const SizedBox(
+                      height: 10), // Spacing between title and subtitle
+                  const Text(
+                    "Donate, track &\nsave lives", // Subtitle
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ],
               ),
-            ),
-            const SizedBox(height: 10),
+              const SizedBox(
+                  height: 120), // Uniform spacing after title and subtitle
 
-            // Subtitle Section
-            const Text(
-              "Donate, track &\nsave lives",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87,
+              // Image Section
+              Image.asset(
+                AppImages.first, // PNG from common class
+                width: width * 0.6, // 60% of screen width
+                fit: BoxFit.contain,
               ),
-            ),
-            const SizedBox(height: 20),
 
-            // PNG Image
-            Image.asset(
-              AppImages.first, // PNG from common class
-              width: width * 0.6, // 60% of screen width
-              height: height * 0.3, // 30% of screen height
-              fit: BoxFit.contain,
-            ),
+              const SizedBox(height: 90), // Uniform spacing after image
 
-            const SizedBox(height: 20),
-
-            // Description
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                "we provide you the easy way to\naccess blood bank",
+              // Description Section
+              const Text(
+                "We provide you the easy way to\naccess blood bank",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.grey,
                 ),
               ),
-            ),
 
-            const SizedBox(height: 20),
-
-            // Spacer for alignment
-            AppSpacing.gapSmall,
-          ],
+              const SizedBox(
+                  height: 30), // Uniform spacing below description (if needed)
+            ],
+          ),
         ),
       ),
     );
