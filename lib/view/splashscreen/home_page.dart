@@ -10,10 +10,6 @@ class HomePage extends StatelessWidget {
     final width = MediaQuery.of(context).size.width; // Screen width
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Blood Donation App"),
-        backgroundColor: Colors.blueGrey,
-      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(

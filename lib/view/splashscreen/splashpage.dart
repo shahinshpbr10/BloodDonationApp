@@ -1,6 +1,6 @@
 import 'package:blood_donation_app/common/appsizes.dart';
 import 'package:blood_donation_app/common/imageurl.dart';
-import 'package:blood_donation_app/view/splashscreen/nextpage.dart';
+import 'package:blood_donation_app/view/splashscreen/home_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -54,7 +54,7 @@ class _SplashPageState extends State<SplashPage> {
                     ),
                   ),
                   const SizedBox(
-                      height: 10), // Spacing between title and subtitle
+                      height: 20), // Spacing between title and subtitle
                   const Text(
                     "Donate, track &\nsave lives", // Subtitle
                     textAlign: TextAlign.center,
