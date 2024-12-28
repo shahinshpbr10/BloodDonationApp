@@ -1,5 +1,7 @@
 import 'package:blood_donation_app/common/appcolors.dart';
 import 'package:blood_donation_app/common/commontexts.dart';
+import 'package:blood_donation_app/view/signin/signin_page.dart';
+import 'package:blood_donation_app/view/splashscreen/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -39,10 +41,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void _skipOnboarding() {
     // Add your navigation logic here
     // For example:
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(builder: (context) => YourHomeScreen()),
-    // );
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
   }
 
   @override
@@ -105,14 +107,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         controller: _pageController,
                         children: [
                           buildPage(
-                            title: AppTexts.onboardingTitle1,
+                            title: AppTexts.onboardingTitle1,context: context
                           ),
                           buildPage(
-                            title: AppTexts.onboardingTitle2,
+                            title: AppTexts.onboardingTitle2,context: context
                           ),
                           buildPage(
                             title: AppTexts.onboardingTitle3,
-                            showButton: true,
+                            showButton: true,context: context
                           ),
                         ],
                       ),

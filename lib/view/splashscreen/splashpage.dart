@@ -1,7 +1,10 @@
 import 'package:blood_donation_app/common/appsizes.dart';
 import 'package:blood_donation_app/common/imageurl.dart';
+import 'package:blood_donation_app/view/onboarding/onboarding_page.dart';
 import 'package:blood_donation_app/view/splashscreen/home_page.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/apptextstyle.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -16,12 +19,12 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     // Set a 0.5 second delay to navigate to another page
-    Future.delayed(const Duration(milliseconds: 2000), () {
+    Future.delayed(const Duration(seconds: 5), () {
       // Navigate to the next screen (replace SplashPage with your next page)
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => HomePage()), // Replace with your next page
+            builder: (context) => OnboardingScreen()), // Replace with your next page
       );
     });
   }
@@ -45,23 +48,27 @@ class _SplashPageState extends State<SplashPage> {
               // Title and Subtitle Section
               Column(
                 children: [
-                  const Text(
-                    "Blood Donation", // Title
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.blueGrey,
+                  Center(
+                    child:  Text(
+                      "Blood Donation", // Title
+                      style: AppTextStyles.bodyText.copyWith(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.blueGrey,
+                      ),
                     ),
                   ),
                   const SizedBox(
                       height: 20), // Spacing between title and subtitle
-                  const Text(
-                    "Donate, track &\nsave lives", // Subtitle
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
+                  Center(
+                    child:  Text(
+                      "Donate, track &\nsave lives", // Subtitle
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.bodyText.copyWith(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87,
+                      ),
                     ),
                   ),
                 ],
@@ -79,10 +86,10 @@ class _SplashPageState extends State<SplashPage> {
               const SizedBox(height: 90), // Uniform spacing after image
 
               // Description Section
-              const Text(
+               Text(
                 "We provide you the easy way to\naccess blood bank",
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: AppTextStyles.smallBodyText.copyWith(
                   fontSize: 14,
                   color: Colors.grey,
                 ),

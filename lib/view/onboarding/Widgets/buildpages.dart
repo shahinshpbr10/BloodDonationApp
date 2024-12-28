@@ -4,11 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../common/apptextstyle.dart';
+import '../../signin/signin_page.dart';
 
 Widget buildPage({
   required String title,
 
+
   bool showButton = false,
+  required BuildContext context,
 }) {
   return Column(
     children: [
@@ -28,7 +31,10 @@ Widget buildPage({
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.black,elevation: 0,foregroundColor: AppColors.primary),
               onPressed: () {
-                // Navigate to another screen
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
