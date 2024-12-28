@@ -1,3 +1,5 @@
+import 'package:blood_donation_app/view/home/home_page.dart';
+import 'package:blood_donation_app/view/home/mainNavbar.dart';
 import 'package:blood_donation_app/view/onboarding/onboarding_page.dart';
 import 'package:blood_donation_app/view/otpscreen/otp_verification_page.dart';
 import 'package:blood_donation_app/view/signin/signin_page.dart';
@@ -13,11 +15,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OTPVerificationPage(onSubmit: (p0) {
-
-      }, onResend: () {
-
-      },),
+      home: MainNavigationPage()
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:blood_donation_app/common/appsizes.dart';
 import 'package:blood_donation_app/common/imageurl.dart';
 import 'package:blood_donation_app/view/onboarding/onboarding_page.dart';
-import 'package:blood_donation_app/view/splashscreen/home_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/apptextstyle.dart';

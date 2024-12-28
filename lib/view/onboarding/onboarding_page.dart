@@ -1,7 +1,6 @@
 import 'package:blood_donation_app/common/appcolors.dart';
 import 'package:blood_donation_app/common/commontexts.dart';
 import 'package:blood_donation_app/view/signin/signin_page.dart';
-import 'package:blood_donation_app/view/splashscreen/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 

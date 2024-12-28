@@ -3,6 +3,7 @@ import 'package:blood_donation_app/view/signin/widgets/custom_text_form_field.da
 import 'package:blood_donation_app/view/signup/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../common/appcolors.dart';
 import '../../common/apptextstyle.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -19,6 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: AppColors.primary,
       body: SingleChildScrollView(
         child: ConstrainedBox(
           constraints: BoxConstraints(minHeight: screenHeight),

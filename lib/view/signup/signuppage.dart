@@ -1,6 +1,7 @@
 import 'package:blood_donation_app/common/imageurl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../common/appcolors.dart';
 import '../../common/apptextstyle.dart';
 import '../signin/signin_page.dart';
 import '../signin/widgets/custom_text_form_field.dart';
@@ -20,6 +21,7 @@ class _SignupScreenState extends State<SignupScreen> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: AppColors.primary,
       body: SingleChildScrollView(
         child: ConstrainedBox(
           constraints: BoxConstraints(minHeight: screenHeight),
