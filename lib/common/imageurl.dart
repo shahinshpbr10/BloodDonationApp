@@ -1,6 +1,6 @@
 class AppImages {
   // SVG Images
-  static const String onboardingImage = 'assets/images/svg/onboardingimage.svg';
+  static const String onboardingImage = 'assets/images/png/first.png';
 
   static const String about = 'assets/images/svg/about.svg';
   static const String adduser = 'assets/images/svg/adduser.svg';

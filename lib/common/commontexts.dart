@@ -7,12 +7,12 @@ class AppTexts {
   static const String back = "Back";
 
   // Onboarding
-  static const String onboardingTitle1 = "Welcome to Our App";
-  static const String onboardingSubtitle1 = "Explore amazing features crafted just for you.";
-  static const String onboardingTitle2 = "Stay Connected";
-  static const String onboardingSubtitle2 = "Connect with your friends and family anytime.";
-  static const String onboardingTitle3 = "Achieve More";
-  static const String onboardingSubtitle3 = "Boost your productivity with powerful tools.";
+  static const String onboardingTitle1 = "Donate blood and save lives.\nTrack your donations and get reminders";
+
+  static const String onboardingTitle2 = "Urgently need blood? Request specific types and get instant alerts";
+
+  static const String onboardingTitle3 = "Locate nearby donors with your blood group. Connect quickly";
+
 
   // Error Messages
   static const String errorNetwork = "Network error. Please try again.";

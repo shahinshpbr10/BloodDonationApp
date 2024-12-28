@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppSpacing {
+
   // Padding
   static const EdgeInsets allSmall = EdgeInsets.all(8.0);
   static const EdgeInsets allMedium = EdgeInsets.all(16.0);
