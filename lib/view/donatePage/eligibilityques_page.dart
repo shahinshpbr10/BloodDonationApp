@@ -1,6 +1,6 @@
 import 'package:blood_donation_app/common/appcolors.dart';
 import 'package:blood_donation_app/common/apptextstyle.dart';
-import 'package:blood_donation_app/view/requestpage/widgets/personal_details_page.dart';
+import 'package:blood_donation_app/view/donatePage/widgets/personal_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 

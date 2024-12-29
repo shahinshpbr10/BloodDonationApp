@@ -1,3 +1,4 @@
+import 'package:blood_donation_app/view/patientDetailsPage/patient_details_Page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -101,7 +102,11 @@ class _EmergencyBloodCarouselState extends State<EmergencyBloodCarousel> {
                         children: [
                           Expanded(
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                                 return PatientDetailsScreen();
+                                },));
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(

@@ -1,3 +1,4 @@
+import 'package:blood_donation_app/view/donatePage/widgets/success_page.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -119,7 +120,9 @@ class _PersonalDetailsFormState extends State<PersonalDetailsForm> {
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        // Handle form submission
+                       Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                         return SuccessPage();
+                       },));
                       }
                     },
                     child: const Text('Submit'),

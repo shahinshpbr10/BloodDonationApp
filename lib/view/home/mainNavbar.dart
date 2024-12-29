@@ -1,7 +1,8 @@
-import 'package:blood_donation_app/view/requestpage/eligibilityques_page.dart';
+import 'package:blood_donation_app/view/requestpage/bloodrequestpage.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/apptextstyle.dart';
+import '../donatePage/eligibilityques_page.dart';
 import 'home_page.dart';
 
 class MainNavigationPage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
   final List<Widget> _pages = [
     const HomePage(),
     EligibilityQuestionScreen(),
-    const SavedPage(),
+    BloodRequestForm(),
     const ProfilePage(),
   ];
 
@@ -48,8 +49,8 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             _buildNavItem(Icons.home, 'Home', _selectedIndex == 0, 0),
-            _buildNavItem(Icons.search, 'Search', _selectedIndex == 1, 1),
-            _buildNavItem(Icons.favorite_border, 'Saved', _selectedIndex == 2, 2),
+            _buildNavItem(Icons.search, 'Donate', _selectedIndex == 1, 1),
+            _buildNavItem(Icons.favorite_border, 'Request', _selectedIndex == 2, 2),
             _buildNavItem(Icons.person_outline, 'Profile', _selectedIndex == 3, 3),
           ],
         ),

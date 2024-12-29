@@ -2,8 +2,9 @@ import 'package:blood_donation_app/view/home/home_page.dart';
 import 'package:blood_donation_app/view/home/mainNavbar.dart';
 import 'package:blood_donation_app/view/onboarding/onboarding_page.dart';
 import 'package:blood_donation_app/view/otpscreen/otp_verification_page.dart';
-import 'package:blood_donation_app/view/requestpage/eligibilityques_page.dart';
-import 'package:blood_donation_app/view/requestpage/widgets/personal_details_page.dart';
+import 'package:blood_donation_app/view/patientDetailsPage/patient_details_Page.dart';
+import 'package:blood_donation_app/view/requestpage/bloodrequestpage.dart';
+
 import 'package:blood_donation_app/view/signin/signin_page.dart';
 import 'package:blood_donation_app/view/signup/signuppage.dart';
 import 'package:blood_donation_app/view/splashscreen/splashpage.dart';
