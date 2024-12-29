@@ -1,4 +1,5 @@
 import 'package:blood_donation_app/common/imageurl.dart';
+import 'package:blood_donation_app/view/home/mainNavbar.dart';
 import 'package:blood_donation_app/view/signin/widgets/custom_text_form_field.dart';
 import 'package:blood_donation_app/view/signup/signuppage.dart';
 import 'package:flutter/material.dart';
@@ -101,9 +102,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SizedBox(height: 24),
                           ElevatedButton(
                             onPressed: () {
-                              if (_formKey.currentState!.validate()) {
-                                // Handle login if form is valid
-                              }
+                              // if (_formKey.currentState!.validate()) {
+                              //   // Handle login if form is valid
+                              // }
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                                return MainNavigationPage();
+                              },));
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,

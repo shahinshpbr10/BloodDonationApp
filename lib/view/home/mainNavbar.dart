@@ -1,3 +1,4 @@
+import 'package:blood_donation_app/view/requestpage/eligibilityques_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/apptextstyle.dart';
@@ -16,7 +17,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
   // List of pages
   final List<Widget> _pages = [
     const HomePage(),
-    const SearchPage(),
+    EligibilityQuestionScreen(),
     const SavedPage(),
     const ProfilePage(),
   ];
@@ -81,19 +82,6 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
 
 
 
-class SearchPage extends StatelessWidget {
-  const SearchPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Search Page',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
 
 class SavedPage extends StatelessWidget {
   const SavedPage({Key? key}) : super(key: key);
